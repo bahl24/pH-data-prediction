@@ -1,6 +1,5 @@
 import os
 import pickle
-# import pandas as pd
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 
@@ -11,7 +10,6 @@ CORS(app)
 def apicall():
     resp_obj = {'status': 'success'}
     post_data = request.get_json()
-    # return str(request)
     r = post_data.get('r')
     g = post_data.get('g')
     b = post_data.get('b')
